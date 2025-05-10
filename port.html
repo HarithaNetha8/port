@@ -4,10 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Haritha Macharla | Portfolio</title>
+  <meta name="description" content="Portfolio of Haritha Macharla – Aspiring Full Stack Developer and Computer Science Undergraduate.">
+  <meta name="keywords" content="Haritha Macharla, portfolio, web developer, full stack, internship, student">
+  <meta name="author" content="Haritha Macharla">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- Bootstrap & FontAwesome -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -15,144 +19,261 @@
     body {
       scroll-behavior: smooth;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
     }
-    .section {
-      padding: 60px 0;
-    }
+
     h2 {
-      font-weight: bold;
+      font-weight: 700;
       margin-bottom: 30px;
+      color: #343a40;
     }
+
     .navbar {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
     }
-    footer a {
+
+    .navbar-light.bg-light {
+      background-color: #ffffff !important;
+    }
+
+    .nav-link {
+      font-weight: 500;
+      color: #333;
       transition: color 0.3s;
     }
-    footer a:hover {
+
+    .nav-link:hover {
       color: #0d6efd;
     }
+
+    .hero {
+      background: linear-gradient(135deg, #0099ff, #ff0099);
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .btn-light {
+      background: white;
+      color: #007bff;
+      border: none;
+      font-weight: 600;
+    }
+
+    .btn-light:hover {
+      background: #e2e6ea;
+      color: #0056b3;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .card {
+      border: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
     .m-2 {
       transition: transform 0.3s ease-in-out;
     }
+
     .m-2:hover {
-      transform: scale(1.2);
+      transform: scale(1.15);
+      transition: all 0.3s ease-in-out;
+    }
+
+    ul.list-inline a {
+      color: #0d6efd;
+      font-weight: 500;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    ul.list-inline a:hover {
+      color: #6610f2;
+    }
+
+    footer {
+      background-color: #282c34;
+      color: white;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #adb5bd;
+    }
+
+    footer a:hover {
+      color: #ffffff;
+    }
+
+    .list-unstyled li {
+      padding: 5px 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#"><i class="fas fa-user"></i> Haritha Macharla</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-          <li class="nav-item"><a class="nav-link" href="#links">Links</a></li>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#"><i class="fas fa-user-circle me-2"></i>Haritha Macharla</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#links">Links</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero text-center">
+  <div class="container">
+    <h1 class="display-4">Hi, I'm Haritha Macharla 👋</h1>
+    <p class="lead">Aspiring Software Developer | Full Stack Enthusiast</p>
+    <a href="#about" class="btn btn-light mt-3">Explore More</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section bg-light text-center animate__animated animate__fadeIn">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>Hello! I'm Haritha Macharla, a passionate Computer Science undergraduate from ACE Engineering College. I love building full stack projects and exploring new technologies. I'm currently looking for internships in web/software development.</p>
+    <a href="Haritha_Resume.pdf" class="btn btn-outline-primary mt-3" download><i class="fas fa-download"></i> Download Resume</a>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section text-center animate__animated animate__zoomIn">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h4><i class="fas fa-laptop-code"></i> Technical</h4>
+        <div class="d-flex flex-wrap justify-content-center">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" width="50" class="m-2"/>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="50" class="m-2"/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h4><i class="fas fa-user-check"></i> Non-Technical</h4>
+        <ul class="list-unstyled">
+          <li>Communication</li>
+          <li>Teamwork</li>
+          <li>Problem Solving</li>
+          <li>Time Management</li>
+          <li>Content Creation</li>
+          <li>Video Editing</li>
         </ul>
       </div>
     </div>
-  </nav>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="section bg-light text-center animate__animated animate__fadeIn">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Hello! I'm Haritha Macharla, a passionate and motivated Computer Science undergraduate from ACE Engineering College (ECE, 2023–2026, CGPA: 9.4). I specialize in web and full stack development, constantly exploring new technologies and enhancing my problem-solving skills. I'm actively seeking internship opportunities in software or web development.</p>
-      <a href="Haritha_Resume.pdf" class="btn btn-outline-primary mt-3" download><i class="fas fa-download"></i> Download Resume</a>
-    </div>
-  </section>
+<!-- Experience -->
+<section id="experience" class="section text-center animate__animated animate__fadeInUp">
+  <div class="container">
+    <h2>Experience</h2>
+    <p><strong>Aashman Foundation</strong> — Social Media Marketing Internship (45 days)</p>
+    <p>Learned account management, business promotion, and audience growth techniques.</p>
+  </div>
+</section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section text-center animate__animated animate__zoomIn">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <h4><i class="fas fa-laptop-code"></i> Technical</h4>
-          <div class="d-flex flex-wrap justify-content-center">
-            <!-- Add icons for each skill -->
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain.svg" width="50" class="m-2"/>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" width="50" class="m-2"/>
+<!-- Certifications -->
+<section id="certifications" class="section bg-light text-center animate__animated animate__fadeInUp">
+  <div class="container">
+    <h2>Certifications</h2>
+    <ul class="list-unstyled">
+      <li>Python Essentials — Cisco</li>
+      <li>SQL Basic — HackerRank</li>
+      <li>CyberSecurity — Cisco</li>
+      <li>Data Analysis with Python — IBM</li>
+      <li>Responsive Web Design — FreeCodeCamp</li>
+      <li>Digital Marketing — Google</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section text-center animate__animated animate__fadeInUp">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">PhishGuard</h5>
+            <p class="card-text">Real-time phishing detection using BERT & CNN, integrated with a Chrome Extension.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
           </div>
         </div>
-        <div class="col-md-6">
-          <h4><i class="fas fa-user-check"></i> Non-Technical</h4>
-          <ul class="list-unstyled">
-            <li>Communication</li>
-            <li>Teamwork</li>
-            <li>Problem Solving</li>
-            <li>Time Management</li>
-            <li>Content Creation</li>
-            <li>Video Editing</li>
-          </ul>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Orphanage Management</h5>
+            <p class="card-text">System to manage and support orphans with organized digital resources.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Rent a Ride</h5>
+            <p class="card-text">A platform for renting vehicles, integrated with user authentication and payment system.</p>
+            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Experience -->
-  <section id="experience" class="section text-center animate__animated animate__fadeInUp">
-    <div class="container">
-      <h2>Experience</h2>
-      <p><strong>Aashman Foundation</strong> — Social Media Marketing Internship (45 days)</p>
-      <p>Acquired knowledge in account management, business promotion, and increasing audience engagement across platforms.</p>
-    </div>
-  </section>
+<!-- Links -->
+<section id="links" class="section text-center bg-light animate__animated animate__fadeInUp">
+  <div class="container">
+    <h2>Connect with Me</h2>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="https://github.com/Haritha" target="_blank">GitHub</a></li>
+      <li class="list-inline-item"><a href="https://www.linkedin.com/in/haritha-macharla/" target="_blank">LinkedIn</a></li>
+      <li class="list-inline-item"><a href="mailto:harithamacharla26@gmail.com">Email</a></li>
+    </ul>
+  </div>
+</section>
 
-  <!-- Certifications -->
-  <section id="certifications" class="section bg-light text-center animate__animated animate__fadeInUp">
-    <div class="container">
-      <h2>Certifications</h2>
-      <ul class="list-unstyled">
-        <li>Python Essentials — Cisco</li>
-        <li>SQL Basic — HackerRank</li>
-        <li>CyberSecurity — Cisco</li>
-        <li>Data Analysis with Python — IBM</li>
-        <li>Responsive Web Design — FreeCodeCamp</li>
-        <li>Digital Marketing — Google</li>
-      </ul>
-    </div>
-  </section>
+<!-- Footer -->
+<footer class="text-center">
+  <p>&copy; 2025 Haritha Macharla. All Rights Reserved.</p>
+</footer>
 
-  <!-- Links -->
-  <section id="links" class="section text-center animate__animated animate__fadeIn">
-    <div class="container">
-      <h2>Profiles & Links</h2>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="http://github.com/HarithaNetha8" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-        <li class="list-inline-item"><a href="http://www.linkedin.com/in/haritha-macharla/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li class="list-inline-item"><a href="https://www.geeksforgeeks.org/user/harinethamacharla28/" target="_blank"><i class="fas fa-code"></i> GFG</a></li>
-        <li class="list-inline-item"><a href="http://leetcode.com/u/Macharla_Haritha/" target="_blank"><i class="fas fa-code"></i> LeetCode</a></li>
-        <li class="list-inline-item"><a href="http://www.hackerrank.com/profile/harinethamachar1" target="_blank"><i class="fab fa-hackerrank"></i> HackerRank</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3">
-    <p>© 2025 Haritha Macharla</p>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+<!-- Bootstrap & JS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
